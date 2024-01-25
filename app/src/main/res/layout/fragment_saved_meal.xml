@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313131"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="420dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg"
+        android:elegantTextHeight="true"
+        android:gravity="center_horizontal"
+        android:text="Saved Meals"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+
+    <!-- buttons for the categories
+
+    Bug : the spacing between the button isn't a constant value
+          idk why
+    -->
+    <android.widget.Button
+        android:id="@+id/Breakfast"
+        android:layout_width="349dp"
+        android:layout_height="73dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Breakfast"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <android.widget.Button
+        android:id="@+id/Lunch"
+        android:layout_width="349dp"
+        android:layout_height="73dp"
+        android:layout_centerHorizontal="true"
+
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Lunch"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Breakfast"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <android.widget.Button
+        android:id="@+id/Dinner"
+        android:layout_width="349dp"
+        android:layout_height="73dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Dinner"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lunch"
+        app:layout_constraintVertical_bias="0.100" />
+
+    <android.widget.Button
+        android:id="@+id/Snacks"
+        android:layout_width="349dp"
+        android:layout_height="73dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Snacks"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Dinner"
+        app:layout_constraintVertical_bias="0.142" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

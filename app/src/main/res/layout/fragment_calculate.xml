@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313131"
+    >
+
+    <!-- Calculation title -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="420dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg"
+        android:elegantTextHeight="true"
+        android:gravity="center_horizontal"
+        android:text="Calculation"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+    <!-- Subsection name changes -->
+
+
+    <TextView
+        android:id="@+id/SubsectionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.016" />
+
+
+    <EditText
+        android:id="@+id/ElementName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SubsectionName"
+
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubsectionName"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <EditText
+        android:id="@+id/Carb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ElementName"
+        android:hint="Carbs (g)"
+        android:inputType="number"
+        android:textSize="24sp"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toStartOf="@+id/Fiber"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toEndOf="@+id/ElementName"
+        app:layout_constraintTop_toBottomOf="@+id/SubsectionName"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <!-- Subsection buttons -->
+
+    <!-- Add element as a class object -->
+    <EditText
+        android:id="@+id/Fiber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ElementName"
+        android:layout_marginEnd="4dp"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/white"
+
+        android:layout_marginRight="4dp"
+        android:hint="Fibers (g)"
+
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubsectionName"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <android.widget.Button
+        android:id="@+id/AddElement"
+        android:layout_width="118dp"
+        android:layout_height="41dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:text="Add element"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ElementName"
+        app:layout_constraintVertical_bias="0.035" />
+
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/CalculationPiechart"
+        app:layout_constraintBottom_toTopOf="@+id/Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddElement"
+        android:layout_height="300dp"
+        android:layout_width="300dp"/>
+
+
+    <!-- Calculate button -->
+    <android.widget.Button
+        android:id="@+id/Calculate"
+        android:layout_width="156dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Calculate"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.789" />
+
+    <android.widget.Button
+        android:id="@+id/Starter"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Starter"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <android.widget.Button
+        android:id="@+id/Condiments"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Condiments"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <android.widget.Button
+        android:id="@+id/MainMeal"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:text="Main Meal"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <android.widget.Button
+        android:id="@+id/Drinks"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:text="Drinks"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.867" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
